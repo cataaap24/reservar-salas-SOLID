@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #F4F7F9;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://fxml.com/fxml/1" fx:controller="reserva.adapters.ui.MainView">
+    <left>
+        <VBox prefHeight="600.0" prefWidth="250.0" style="-fx-background-color: #2C3E50;" BorderPane.alignment="CENTER">
+            <children>
+                <VBox alignment="CENTER" prefHeight="100.0" prefWidth="250.0">
+                    <children>
+                        <Label text="RESERVA SALAS" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="22.0" />
+                            </font>
+                        </Label>
+                        <Label text="Gestión Universitaria" textFill="#bdc3c7" />
+                    </children>
+                </VBox>
+                <Separator opacity="0.2" prefWidth="200.0" />
+                <VBox prefHeight="400.0" prefWidth="250.0" spacing="10.0">
+                    <children>
+                        <Button alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #34495E; -fx-text-fill: white; -fx-cursor: hand;" text="• Registrar Sala">
+                            <padding><Insets bottom="15.0" left="20.0" top="15.0" /></padding>
+                            <font><Font size="14.0" /></font>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-text-fill: #bdc3c7;" text="• Crear Reserva">
+                            <padding><Insets bottom="15.0" left="20.0" top="15.0" /></padding>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-text-fill: #bdc3c7;" text="• Consultar Reservas">
+                            <padding><Insets bottom="15.0" left="20.0" top="15.0" /></padding>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-text-fill: #bdc3c7;" text="• Reporte General">
+                            <padding><Insets bottom="15.0" left="20.0" top="15.0" /></padding>
+                        </Button>
+                    </children>
+                    <padding>
+                        <Insets top="20.0" />
+                    </padding>
+                </VBox>
+            </children>
+        </VBox>
+    </left>
+
+    <center>
+        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="25.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox prefHeight="60.0" prefWidth="650.0">
+                    <children>
+                        <Label text="Registrar Nueva Sala" textFill="#2c3e50">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <padding>
+                        <Insets left="40.0" top="30.0" />
+                    </padding>
+                </HBox>
+
+                <VBox maxWidth="500.0" prefWidth="500.0" spacing="15.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);">
+                    <padding>
+                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                    </padding>
+                    <children>
+                        <Label text="Información de la Sala" textFill="#7f8c8d">
+                            <font><Font name="System Italic" size="14.0" /></font>
+                        </Label>
+
+                        <Label text="Nombre de la Sala:" />
+                        <TextField fx:id="txtNombre" prefHeight="35.0" promptText="Ej: Laboratorio 1" />
+
+                        <Label text="Tipo de Sala:" />
+                        <ComboBox fx:id="cbTipo" prefHeight="35.0" prefWidth="500.0" promptText="Seleccione el tipo..." />
+
+                        <Label text="Aforo (Capacidad):" />
+                        <TextField fx:id="txtAforo" prefHeight="35.0" promptText="Ej: 30" />
+
+                        <Button fx:id="btnGuardar" onAction="#onGuardarClick" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="45.0" style="-fx-background-color: #27AE60; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;" text="GUARDAR SALA" />
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>
