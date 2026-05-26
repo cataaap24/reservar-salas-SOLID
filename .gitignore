@@ -35,3 +35,4 @@ replay_pid*
 
 # Draw backup files
 *.bkp
+/.idea

@@ -1,12 +1,12 @@
-package reserva.infrastructure.repositories;
+package java.reserva.infrastructure.repositories;
 
-import reserva.entities.Sala;
-import reserva.usecases.ports.SalaRepository;
+import java.reserva.entities.Sala;
+import java.reserva.usecases.ports.SalaRepository;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Optional;
+
 
 public class InMemorySalaRepository implements SalaRepository {
     private int nextId;

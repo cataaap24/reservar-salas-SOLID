@@ -1,10 +1,9 @@
-package reserva.usecases.services;
+package java.reserva.usecases.services;
 
-import jdk.dynalink.Operation;
-import reserva.entities.Sala;
-import reserva.entities.TipoSala;
-import reserva.usecases.dto.OperationResult;
-import reserva.usecases.ports.SalaRepository;
+import java.reserva.entities.Sala;
+import java.reserva.entities.TipoSala;
+import java.reserva.usecases.dto.OperationResult;
+import java.reserva.usecases.ports.SalaRepository;
 
 public class RegistrarSalaUseCase {
     private final SalaRepository salaRepository;
