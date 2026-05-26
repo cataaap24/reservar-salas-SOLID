@@ -1,4 +1,4 @@
-package reserva.entities;
+package java.reserva.entities;
 
 public abstract class Sala {
     private String id;

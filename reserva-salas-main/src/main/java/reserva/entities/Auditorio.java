@@ -1,4 +1,4 @@
-package reserva.entities;
+package java.reserva.entities;
 
 public class Auditorio  extends Sala {
 
