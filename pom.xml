@@ -4,8 +4,8 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>isi.reservar-salas</groupId>
-    <artifactId>reservar-salas</artifactId>
+    <groupId>isi.reservar</groupId>
+    <artifactId>reservar</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -39,10 +39,9 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.8</version>
                 <configuration>
-                    <mainClass>edu.usta.reservas.MainApp</mainClass>
+                    <mainClass>isi.reservar.MainApp</mainClass>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
 </project>
