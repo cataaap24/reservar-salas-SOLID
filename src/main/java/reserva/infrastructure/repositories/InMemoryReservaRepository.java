@@ -22,7 +22,6 @@ public class InMemoryReservaRepository implements ReservaRepository {
         return null;
     }
 
-    @Override
     public Reserva findByFecha(String fecha) {
         for (Reserva reserva : reservas) {
             if (Objects.equals(reserva.getFecha(), fecha)) {
@@ -47,4 +46,8 @@ public class InMemoryReservaRepository implements ReservaRepository {
         reservas.add(reserva);
     }
 
+    @Override
+    public List<Reserva> findAll(){
+        return reservas;
+    }
 }

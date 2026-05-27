@@ -42,4 +42,14 @@ public class InMemorySalaRepository implements SalaRepository {
     public List<Sala> listarTodas() {
         return Collections.unmodifiableList(salas);
     }
+
+    @Override
+    public Sala buscarPorId(String id) {
+        for (Sala sala : salas) {
+            if (sala.getId().trim().equals(id)) {
+                return sala;
+            }
+        }
+        return null;
+    }
 }
