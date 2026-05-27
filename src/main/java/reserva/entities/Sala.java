@@ -22,8 +22,15 @@ public abstract class Sala {
     public boolean isActiva() {
         return activa;
     }
+    
     public void setActiva(boolean activa) {
         this.activa = activa;
     }
+
+    public boolean puedeAlojar(int cantidad) {
+        return cantidad > 0 && cantidad <= capacidad;
+    }
+
+    public abstract String getTipo();
     public String getUbicacion() { return ubicacion; }
 }
