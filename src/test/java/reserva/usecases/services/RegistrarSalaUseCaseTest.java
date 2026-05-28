@@ -1,10 +1,10 @@
 package reserva.usecases.services;
 
 import org.junit.jupiter.api.Test;
-import reserva.entities.Sala;
+import com.reserva.entities.Sala;
 import reserva.entities.TipoSala;
-import reserva.infrastructure.repositories.InMemorySalaRepository;
-import reserva.usecases.ports.SalaRepository;
+import com.reserva.infrastructure.repositories.InMemorySalaRepository;
+import com.reserva.usecases.ports.SalaRepository;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;

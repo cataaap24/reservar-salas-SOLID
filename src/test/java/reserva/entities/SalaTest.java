@@ -1,5 +1,6 @@
 package reserva.entities;
 
+import com.reserva.entities.Sala;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

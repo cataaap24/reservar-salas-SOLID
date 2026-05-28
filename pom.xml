@@ -4,8 +4,8 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>isi.reservar</groupId>
-    <artifactId>reservar</artifactId>
+    <groupId>com.reserva</groupId>
+    <artifactId>reserva</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -39,7 +39,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.8</version>
                 <configuration>
-                    <mainClass>isi.reservar.MainApp</mainClass>
+                    <mainClass>com.reserva.adapters.ui.Main</mainClass>
                 </configuration>
             </plugin>
         </plugins>
