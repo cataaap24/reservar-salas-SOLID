@@ -23,9 +23,9 @@ public class InMemoryReservaRepository implements ReservaRepository {
     }
 
     @Override
-    public Reserva findByIdYFecha(String id, String fecha) {
+    public Reserva findByIdSalaYFecha(String id, String fecha) {
         for (Reserva reserva : reservas) {
-            if (Objects.equals(reserva.getId(), id) && Objects.equals(reserva.getFecha(), fecha)) {
+            if (Objects.equals(reserva.getSalaId(), id) && Objects.equals(reserva.getFecha(), fecha)) {
                 return reserva;
             }
         }
@@ -36,4 +36,7 @@ public class InMemoryReservaRepository implements ReservaRepository {
     public void guardar(Reserva reserva){
         reservas.add(reserva);
     }
+
+    @Override
+    public List<Reserva> listarTodas() { return this.reservas; }
 }

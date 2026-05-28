@@ -4,9 +4,9 @@ import com.reserva.entities.Sala;
 import com.reserva.usecases.dto.OperationResult;
 import com.reserva.usecases.ports.SalaRepository;
 
-public class ReglaIdUnico implements ReglaSala {
+public class ReglaSalaIdUnico implements ReglaSala {
     private final SalaRepository salaRepository;
-    public ReglaIdUnico(SalaRepository salaRepository) {
+    public ReglaSalaIdUnico(SalaRepository salaRepository) {
         this.salaRepository = salaRepository;
     }
     @Override

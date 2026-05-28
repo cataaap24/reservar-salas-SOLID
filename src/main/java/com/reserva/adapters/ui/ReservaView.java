@@ -14,7 +14,7 @@ import com.reserva.usecases.services.ReservaApp;
 
 public class ReservaView {
 
-    private ReservaApp app;
+    private final ReservaApp app;
 
     private TextField txtSalaId;
     private TextField txtSalaNombre;
@@ -194,7 +194,7 @@ public class ReservaView {
             String ubicacion = txtSalaUbicacion.getText();
 
             resultado = app.registrarSala(id, nombre, tipo, capacidad, ubicacion);
-            if (resultado.isSuccess()) txtResultado.setText(resultado.getMessage());
+            txtResultado.setText(resultado.getMessage());
 
         } catch (NumberFormatException e) {
             txtResultado.setText(e.getMessage());
@@ -212,7 +212,7 @@ public class ReservaView {
             String responsable = txtResponsable.getText();
             int asistentes = Integer.parseInt(txtAsistentes.getText());
 
-            /*String resultado = app.crearReserva(
+            OperationResult resultado = app.crearReserva(
                     id,
                     salaId,
                     fecha,
@@ -221,37 +221,45 @@ public class ReservaView {
                     tipoActividad,
                     responsable,
                     asistentes
-            );*/
+            );
 
-            txtResultado.setText("Por implementar");
+            txtResultado.setText(resultado.getMessage());
         } catch (NumberFormatException e) {
             txtResultado.setText("Error: las horas y la cantidad de asistentes deben ser números enteros.");
         }
     }
 
     private void consultarReserva() {
-        //String resultado = reservaService.consultarReserva(txtReservaId.getText());
-        txtResultado.setText("Por implementar");
+        OperationResult resultado = app.consultarReserva(txtReservaId.getText());
+        if (resultado.isSuccess()) {
+            txtResultado.setText(resultado.getMessage());
+            return;
+        }
+        txtResultado.setText("Error: " + resultado.getMessage());
     }
 
     private void cancelarReserva() {
-        //String resultado = reservaService.cancelarReserva(txtReservaId.getText());
-        txtResultado.setText("Por implementar");
+        OperationResult resultado = app.cancelarReserva(txtReservaId.getText());
+        if (resultado.isSuccess()) {
+            txtResultado.setText(resultado.getMessage());
+            return;
+        }
+        txtResultado.setText("Error: " + resultado.getMessage());
     }
 
     private void listarSalas() {
-        //String resultado = reservaService.listarSalas();
-        txtResultado.setText("Por implementar");
+        String resultado = app.listarSalas();
+        txtResultado.setText(resultado);
     }
 
     private void listarReservas() {
-        //String resultado = reservaService.listarReservas();
-        txtResultado.setText("Por implementar");
+        String resultado = app.listarReservas();
+        txtResultado.setText(resultado);
     }
 
     private void generarReporte() {
-        //String resultado = reservaService.generarReporte();
-        txtResultado.setText("Por implementar");
+        String resultado = app.generarReporte();
+        txtResultado.setText(resultado);
     }
 
     private void limpiarCampos() {

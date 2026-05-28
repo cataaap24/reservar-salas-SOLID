@@ -1,4 +1,4 @@
-package reserva.usecases.services;
+package com.reserva.usecases.services;
 
 import com.reserva.usecases.factories.SalaFactory;
 import org.junit.jupiter.api.Test;
@@ -6,16 +6,15 @@ import com.reserva.entities.Sala;
 import com.reserva.infrastructure.repositories.InMemorySalaRepository;
 import com.reserva.usecases.ports.SalaRepository;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 class RegistrarSalaUseCaseTest {
     @Test
     void registrarSalaNormal() {
         SalaRepository salaRepository = new InMemorySalaRepository();
         Sala sala = SalaFactory.crear("S1", "Aula 1", "AULA", 20, "Bloque A");
-        boolean nombreUnico = salaRepository.buscarPorNombre(sala.getNombre()) == null;
-        assertTrue(nombreUnico);
+        salaRepository.guardar(sala);
+        assertEquals(sala, salaRepository.buscarPorId("S1"));
     }
 
     @Test
