@@ -1,4 +1,4 @@
-package isi.reservar;
+fepackage isi.reservar;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
