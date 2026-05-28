@@ -1,9 +1,6 @@
 package com.reserva.usecases.services;
 
-import com.reserva.entities.Auditorio;
-import com.reserva.entities.Aula;
-import com.reserva.entities.Laboratorio;
-import com.reserva.entities.Reserva;
+import com.reserva.entities.*;
 import com.reserva.infrastructure.repositories.InMemoryReservaRepository;
 import com.reserva.usecases.dto.OperationResult;
 import com.reserva.usecases.ports.ReservaRepository;
@@ -65,4 +62,5 @@ public class ReservaApp {
     public OperationResult registrarSala(String id, String nombre, String tipo, int capacidad, String ubicacion) {
         return registrarSalaUseCase.ejecutar(id, nombre, tipo, capacidad, ubicacion);
     }
+
 }
